@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export function MyAwesomeApp() {
     const firstName = 'Cristina';
     const lastName = 'Ruiz';
@@ -7,6 +9,14 @@ export function MyAwesomeApp() {
         zipCode: 'ABC-123',
         country: 'Canada',
     };
+    /* Pa usar css */
+    const myStyles: CSSProperties = {
+        backgroundColor: '#fafafa',
+        borderRadius: 20,
+        padding: 10,
+        marginTop: 30,
+
+    }
     return (
         <>
             <h1>{firstName}</h1>
@@ -25,7 +35,7 @@ export function MyAwesomeApp() {
             {/* Los literales no deja */}
             {/*     <p>{address}</p> */}
             {/* Por lo que pra hacerlo tendremos que hacer esto */}
-            <p>{JSON.stringify(address)}</p>
+            <p style={myStyles}>{JSON.stringify(address)}</p>
 
         </>
     );

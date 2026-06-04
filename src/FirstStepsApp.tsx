@@ -1,13 +1,14 @@
+import { ItemCouter } from "./shopping-card/ItemCouter";
+
 export function FirstStepApp(){
     return(
    <>
-    <h1>Hola mundo</h1>
-   <p>Esto es un parrafo</p>
+    <h1>Carrito de compras</h1>
 
-   <button>Click me</button>
-   <div>
-    <h2>HOla dentro de un div</h2>
-   </div>
+    <ItemCouter></ItemCouter>
+    <ItemCouter></ItemCouter>
+    <ItemCouter></ItemCouter>
+   
    </>
    );
 }
