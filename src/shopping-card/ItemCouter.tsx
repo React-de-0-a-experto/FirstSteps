@@ -8,13 +8,21 @@ const styleButtons: CSSProperties = {
 const styleTitle: CSSProperties = {
   width: 150,
 }
+
+interface Props {
+  name: string,
+  quantity?: number,
+};
+
+
+
 /* Si pones rafc te auto rellena la funt */
-export const ItemCouter = () => {
+export const ItemCouter = ({ name, quantity }: Props) => {
   return (
     <section style={styleButtons}>
-      <span style={styleTitle}>Nintendo Switch 2</span>
+      <span style={styleTitle}>{name}</span>
       <button>+1</button>
-      <span>10</span>
+      <span>{quantity}</span>
       <button>-1</button>
     </section>
   )
