@@ -1,31 +1,32 @@
-import React, { type CSSProperties } from 'react'
+import React, { useState, type CSSProperties } from 'react'
 
-const styleButtons: CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 10
-}
-const styleTitle: CSSProperties = {
-  width: 150,
-}
+/* import './ItemCounter.css' */
+import styles from './ItemCounter.module.css';
 
 interface Props {
   name: string,
-  quantity?: number,
+  quantity: number,
 };
-
-
 
 /* Si pones rafc te auto rellena la funt */
 export const ItemCouter = ({ name, quantity }: Props) => {
+  const [count, setCount] = useState(quantity);
+  const handleAdd = () => setCount(count + 1) ;
+  const handleSubtract = () => 
+  {
+    if (count === 1) return;
+      
+    
+    setCount(count - 1);
+  };
   const handledClick = () => { console.log(`click ${name}`) };
   return (
-    <section style={styleButtons}>
-      <span style={styleTitle}>{name}</span>
-      <button onClick={handledClick}
+    <section className={styles.itemRow}>
+      <span className={styles.itemText} style={{color: count === 1 ? 'red' : 'black'}}>{name}</span>
+      <button onClick={handleAdd}
       >+1</button>
-      <span>{quantity}</span>
-      <button>-1</button>
+      <span>{count}</span>
+      <button onClick={handleSubtract} >-1</button>
     </section>
   )
 }
