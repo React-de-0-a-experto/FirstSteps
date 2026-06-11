@@ -18,10 +18,12 @@ interface Props {
 
 /* Si pones rafc te auto rellena la funt */
 export const ItemCouter = ({ name, quantity }: Props) => {
+  const handledClick = () => { console.log(`click ${name}`) };
   return (
     <section style={styleButtons}>
       <span style={styleTitle}>{name}</span>
-      <button>+1</button>
+      <button onClick={handledClick}
+      >+1</button>
       <span>{quantity}</span>
       <button>-1</button>
     </section>
