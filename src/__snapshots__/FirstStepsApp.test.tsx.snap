@@ -3,18 +3,16 @@
 exports[`FirstStepsApp > should match snapshot 1`] = `
 <div>
   <h1>
-    Hola mundo
+    Carrito de compras
   </h1>
-  <p>
-    Esto es un parrafo
-  </p>
-  <button>
-    Click me
-  </button>
-  <div>
-    <h2>
-      HOla dentro de un div
-    </h2>
-  </div>
+  <div
+    data-testid="ItemCouter"
+  />
+  <div
+    data-testid="ItemCouter"
+  />
+  <div
+    data-testid="ItemCouter"
+  />
 </div>
 `;

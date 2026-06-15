@@ -11,7 +11,6 @@ const itemsInCart: ItemInCart[] = [
     { productName: 'Nintendo Switch 2', quantity: 5 },
     { productName: 'Pro controller', quantity: 1 },
     { productName: 'Super Mario', quantity: 3 },
-    { productName: 'Super Smash', quantity: 7 },
 ];
 
 export function FirstStepApp() {
