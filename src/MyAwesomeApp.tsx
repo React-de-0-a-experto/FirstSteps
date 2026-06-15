@@ -18,10 +18,11 @@ export function MyAwesomeApp() {
 
     }
     return (
-        <>
-            <h1>{firstName}</h1>
+        <div>
+            <h1 data-testid="first-name-title">{firstName}</h1>
             <h3>{lastName}</h3>
-            <p>{favoriteGames.join(', ')}</p>
+            <p>{2+2}</p>
+            <p className="mi-clase-favorita">{favoriteGames.join(', ')}</p>
 
             <ul>
                 <li>{favoriteGames[0]}</li>
@@ -37,7 +38,7 @@ export function MyAwesomeApp() {
             {/* Por lo que pra hacerlo tendremos que hacer esto */}
             <p style={myStyles}>{JSON.stringify(address)}</p>
 
-        </>
+        </div>
     );
 
 }

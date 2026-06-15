@@ -9,7 +9,7 @@ interface Props {
 };
 
 /* Si pones rafc te auto rellena la funt */
-export const ItemCouter = ({ name, quantity }: Props) => {
+export const ItemCouter = ({ name, quantity}: Props) => {
   const [count, setCount] = useState(quantity);
   const handleAdd = () => setCount(count + 1) ;
   const handleSubtract = () => 
